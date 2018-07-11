@@ -6,6 +6,7 @@
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Codeinsee</th>
                 <th>Commune</th>
                 <th>Centroidxetrs3035</th>
@@ -13,41 +14,26 @@
                 <th>Dateindicesupervise</th>
                 <th>Echeance</th>
                 <th>Dateecheance</th>
-                <th>Valeurssindiceno2</th>
-                <th>Valeurssindiceo3</th>
-                <th>Valeurssindicepm10</th>
-                <th>Valeurssindiceso2</th>
-                <th>Libelleindice</th>
-                <th>Libellefamilleindice</th>
                 <th>Libellequaliteair</th>
                 <th>Couleurcartege</th>
-                <th>Libellepolluantresponsable</th>
-                <th>Notationpolluantresponsable</th>
-                <th>Id</th>
+                <th>lIBELLEPOLLUANTRESPONSABLE</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for information in information %}
             <tr>
-                <td><a href="{{ path('information_show', { 'id': information.id }) }}">{{ information.codeInsee }}</a></td>
+                <td><a href="{{ path('information_show', { 'id': information.id }) }}">{{ information.id }}</a></td>
+                <td>{{ information.codeInsee }}</td>
                 <td>{{ information.commune }}</td>
                 <td>{{ information.centroidXEtrs3035 }}</td>
                 <td>{{ information.centroidYEtrs3035 }}</td>
-                <td>{% if information.dateIndiceSupervise %}{{ information.dateIndiceSupervise|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ information.echeance }}</td>
-                <td>{% if information.dateEcheance %}{{ information.dateEcheance|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ information.valeurSsindiceNo2 }}</td>
-                <td>{{ information.valeurSsindiceO3 }}</td>
-                <td>{{ information.valeurSsindicePm10 }}</td>
-                <td>{{ information.valeurSsindiceSo2 }}</td>
-                <td>{{ information.libelleIndice }}</td>
-                <td>{{ information.libelleFamilleIndice }}</td>
-                <td>{{ information.libelleQualiteAir }}</td>
-                <td>{{ information.couleurCarteGe }}</td>
-                <td>{{ information.libellePolluantResponsable }}</td>
-                <td>{{ information.notationPolluantResponsable }}</td>
-                <td>{{ information.id }}</td>
+                <td>{% if information.dATEINDICESUPERVISE %}{{ information.dATEINDICESUPERVISE|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ information.eCHEANCE }}</td>
+                <td>{% if information.dATEECHEANCE %}{{ information.dATEECHEANCE|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ information.lIBELLEQUALITEAIR }}</td>
+                <td>{{ information.cOULEURCARTEGE }}</td>
+                <td>{{ information.lIBELLEPOLLUANTRESPONSABLE }}</td>
                 <td>
                     <ul>
                         <li>

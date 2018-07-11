@@ -8,55 +8,99 @@ use Doctrine\ORM\Mapping as ORM;
  * Information
  *
  * @ORM\Table(name="information")
+<<<<<<< HEAD
  * @ORM\Entity
+=======
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InformationRepository")
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
  */
 class Information
 {
     /**
+<<<<<<< HEAD
      * @var string
      *
      * @ORM\Column(name="code_insee", type="string", length=255, nullable=false)
+=======
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code_insee", type="string", length=255)
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
      */
     private $codeInsee;
 
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="commune", type="string", length=255, nullable=false)
+=======
+     * @ORM\Column(name="commune", type="string", length=255)
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
      */
     private $commune;
 
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="centroid_x_etrs3035", type="string", length=255, nullable=false)
+=======
+     * @ORM\Column(name="centroid_x_etrs3035", type="string", length=255)
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
      */
     private $centroidXEtrs3035;
 
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="centroid_y_etrs3035", type="string", length=255, nullable=false)
+=======
+     * @ORM\Column(name="centroid_y_etrs3035", type="string", length=255)
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
      */
     private $centroidYEtrs3035;
 
     /**
      * @var \DateTime
      *
+<<<<<<< HEAD
      * @ORM\Column(name="DATE_INDICE_SUPERVISE", type="datetime", nullable=false)
      */
     private $dateIndiceSupervise;
+=======
+     * @ORM\Column(name="DATE_INDICE_SUPERVISE", type="datetime")
+     */
+    private $dATEINDICESUPERVISE;
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
 
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="ECHEANCE", type="string", length=255, nullable=false)
      */
     private $echeance;
+=======
+     * @ORM\Column(name="ECHEANCE", type="string", length=255)
+     */
+    private $eCHEANCE;
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
 
     /**
      * @var \DateTime
      *
+<<<<<<< HEAD
      * @ORM\Column(name="DATE_ECHEANCE", type="datetime", nullable=false)
      */
     private $dateEcheance;
@@ -74,10 +118,17 @@ class Information
      * @ORM\Column(name="COULEUR_CARTE_GE", type="string", length=255, nullable=false)
      */
     private $couleurCarteGe;
+=======
+     * @ORM\Column(name="DATE_ECHEANCE", type="datetime")
+     */
+    private $dATEECHEANCE;
+
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
 
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="LIBELLE_POLLUANT_RESPONSABLE", type="string", length=255, nullable=false)
      */
     private $libellePolluantResponsable;
@@ -343,4 +394,26 @@ class Information
     {
         return $this->id;
     }
+=======
+     * @ORM\Column(name="LIBELLE_QUALITE_AIR", type="string", length=255)
+     */
+    private $lIBELLEQUALITEAIR;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="COULEUR_CARTE_GE", type="string", length=255)
+     */
+    private $cOULEURCARTEGE;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="LIBELLE_POLLUANT_RESPONSABLE", type="string", length=255)
+     */
+    private $lIBELLEPOLLUANTRESPONSABLE;
+
+
+
+>>>>>>> c582ef8e0800d32abbbd57a416bc5500b9d778a0
 }

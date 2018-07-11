@@ -3,9 +3,13 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Information;
+
+use AppBundle\Repository\InformationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use JMS\Serializer\SerializerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Information controller.
@@ -29,6 +33,28 @@ class InformationController extends Controller
         return $this->render('information/index.html.twig', array(
             'information' => $information,
         ));
+    }
+
+    /**
+     * Lists all information entities.
+     *
+     * @Route("/find/{adresse}", name="information_index")
+     * @Method("GET")
+     * @param $adresse
+     * @param SerializerInterface $serializer
+     * @return Response
+     */
+    public function findAction($adresse, SerializerInterface $serializer)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $informations = $em->getRepository('AppBundle:Information')->findInfosByAdresse($adresse);
+        $data=$serializer->serialize($informations, 'json');
+
+        $response=new Response($data);
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
+
     }
 
     /**
