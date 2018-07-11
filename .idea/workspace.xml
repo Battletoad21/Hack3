@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b54bf32-7979-4e1c-b2bf-4df40debabba" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/hackathon3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hackathon3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -9,6 +10,11 @@
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,6 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,7 +52,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
               <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+=======
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Information.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Information.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-390" />
           </provider>
         </entry>
       </file>
@@ -57,9 +87,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+=======
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
       </list>
     </option>
   </component>
@@ -123,10 +158,17 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="67" />
     <option name="y" value="114" />
     <option name="width" value="1833" />
     <option name="height" value="789" />
+=======
+    <option name="x" value="79" />
+    <option name="y" value="59" />
+    <option name="width" value="1521" />
+    <option name="height" value="800" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -155,17 +197,43 @@
             <path>
               <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
+            </path>
+            <path>
+              <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
             </path>
             <path>
               <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
+            </path>
+            <path>
+              <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
@@ -173,6 +241,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
@@ -184,11 +253,36 @@
               <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
             </path>
             <path>
               <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
+            </path>
+            <path>
+              <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hackathon3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hackathon3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
             </path>
           </expand>
           <select />
@@ -226,11 +320,16 @@
       <option name="presentableId" value="Default" />
       <updated>1531314319188</updated>
       <workItem from="1531314320451" duration="1527000" />
+<<<<<<< HEAD
       <workItem from="1531323286167" duration="2935000" />
+=======
+      <workItem from="1531325394141" duration="1515000" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4462000" />
   </component>
   <component name="ToolWindowManager">
@@ -238,17 +337,35 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
+=======
+    <option name="totallyTimeSpent" value="3042000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2505037" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19514884" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.23593964" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -265,6 +382,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -286,10 +404,35 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 921b227a770f244b4cade3a6d4d231fd57400c38
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml" />
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/config/doctrine/Information.orm.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Information.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
