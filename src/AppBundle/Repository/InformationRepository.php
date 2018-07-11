@@ -11,11 +11,11 @@ namespace AppBundle\Repository;
 class InformationRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findInfosByAdresse($adresse){
-        $fields = array('i.*');
+        $fields = array('i.codeInsee','i.commune','i.centroidXEtrs3035','i.centroidYEtrs3035','i.dATEINDICESUPERVISE','i.eCHEANCE','i.dATEECHEANCE','i.lIBELLEQUALITEAIR','i.cOULEURCARTEGE','i.lIBELLEPOLLUANTRESPONSABLE');
         return $this->createQueryBuilder('i')
             ->select($fields)
-            ->andWhere('i.commune LIKE :adresse')
-            ->orWhere('i.codeInsee LIKE :adresse')
+            ->andWhere('i.codeInsee LIKE :adresse')
+            ->orWhere('i.commune LIKE :adresse')
             ->setParameter('adresse', '%'.$adresse.'%')
             ->getQuery()
             ->getResult()

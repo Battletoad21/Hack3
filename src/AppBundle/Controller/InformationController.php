@@ -6,9 +6,9 @@ use AppBundle\Entity\Information;
 use AppBundle\Repository\InformationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use JMS\Serializer\SerializerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use JMS\Serializer\SerializerInterface;
 
 /**
  * Information controller.
@@ -37,7 +37,7 @@ class InformationController extends Controller
     /**
      * Lists all information entities.
      *
-     * @Route("/find/{adresse}", name="information_find")
+     * @Route("/find/{adresse}", name="information_index")
      * @Method("GET")
      * @param $adresse
      * @param SerializerInterface $serializer
@@ -48,13 +48,12 @@ class InformationController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $informations = $em->getRepository('AppBundle:Information')->findInfosByAdresse($adresse);
-
-        dump($informations);
         $data=$serializer->serialize($informations, 'json');
 
         $response=new Response($data);
         $response->headers->set('Content-Type', 'application/json');
         return $response;
+
     }
 
     /**

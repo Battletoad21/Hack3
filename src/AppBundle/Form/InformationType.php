@@ -13,7 +13,7 @@ class InformationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('codeInsee')->add('commune')->add('centroidXEtrs3035')->add('centroidYEtrs3035')->add('dateIndiceSupervise')->add('echeance')->add('dateEcheance')->add('valeurSsindiceNo2')->add('valeurSsindiceO3')->add('valeurSsindicePm10')->add('valeurSsindiceSo2')->add('libelleIndice')->add('libelleFamilleIndice')->add('libelleQualiteAir')->add('couleurCarteGe')->add('libellePolluantResponsable')->add('notationPolluantResponsable');
+        $builder->add('codeInsee')->add('commune')->add('centroidXEtrs3035')->add('centroidYEtrs3035')->add('dATEINDICESUPERVISE')->add('eCHEANCE')->add('dATEECHEANCE')->add('vALEURSSINDICENO2')->add('vALEURSSINDICEO3')->add('vALEURSSINDICEPM10')->add('vALEURSSINDICESO2')->add('lIBELLEINDICE')->add('lIBELLEFAMILLEINDICE')->add('lIBELLEQUALITEAIR')->add('cOULEURCARTEGE')->add('lIBELLEPOLLUANTRESPONSABLE')->add('nOTATIONPOLLUANTRESPONSABLE');
     }/**
      * {@inheritdoc}
      */

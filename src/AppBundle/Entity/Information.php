@@ -8,142 +8,105 @@ use Doctrine\ORM\Mapping as ORM;
  * Information
  *
  * @ORM\Table(name="information")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\InformationRepository")
  */
 class Information
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="code_insee", type="string", length=255, nullable=false)
+     * @ORM\Column(name="code_insee", type="string", length=255)
      */
     private $codeInsee;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="commune", type="string", length=255, nullable=false)
+     * @ORM\Column(name="commune", type="string", length=255)
      */
     private $commune;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="centroid_x_etrs3035", type="string", length=255, nullable=false)
+     * @ORM\Column(name="centroid_x_etrs3035", type="string", length=255)
      */
     private $centroidXEtrs3035;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="centroid_y_etrs3035", type="string", length=255, nullable=false)
+     * @ORM\Column(name="centroid_y_etrs3035", type="string", length=255)
      */
     private $centroidYEtrs3035;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DATE_INDICE_SUPERVISE", type="datetime", nullable=false)
+     * @ORM\Column(name="DATE_INDICE_SUPERVISE", type="datetime")
      */
-    private $dateIndiceSupervise;
+    private $dATEINDICESUPERVISE;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ECHEANCE", type="string", length=255, nullable=false)
+     * @ORM\Column(name="ECHEANCE", type="string", length=255)
      */
-    private $echeance;
+    private $eCHEANCE;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DATE_ECHEANCE", type="datetime", nullable=false)
+     * @ORM\Column(name="DATE_ECHEANCE", type="datetime")
      */
-    private $dateEcheance;
+    private $dATEECHEANCE;
+
 
     /**
      * @var string
      *
-     * @ORM\Column(name="VALEUR_SSINDICE_NO2", type="string", length=255, nullable=false)
+     * @ORM\Column(name="LIBELLE_QUALITE_AIR", type="string", length=255)
      */
-    private $valeurSsindiceNo2;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="VALEUR_SSINDICE_O3", type="integer", nullable=false)
-     */
-    private $valeurSsindiceO3;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="VALEUR_SSINDICE_PM10", type="integer", nullable=false)
-     */
-    private $valeurSsindicePm10;
+    private $lIBELLEQUALITEAIR;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="VALEUR_SSINDICE_SO2", type="string", length=255, nullable=false)
+     * @ORM\Column(name="COULEUR_CARTE_GE", type="string", length=255)
      */
-    private $valeurSsindiceSo2;
+    private $cOULEURCARTEGE;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="LIBELLE_INDICE", type="string", length=255, nullable=false)
+     * @ORM\Column(name="LIBELLE_POLLUANT_RESPONSABLE", type="string", length=255)
      */
-    private $libelleIndice;
+    private $lIBELLEPOLLUANTRESPONSABLE;
+
+
+
 
     /**
-     * @var string
+     * Get id.
      *
-     * @ORM\Column(name="LIBELLE_FAMILLE_INDICE", type="string", length=255, nullable=false)
+     * @return int
      */
-    private $libelleFamilleIndice;
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="LIBELLE_QUALITE_AIR", type="string", length=255, nullable=false)
-     */
-    private $libelleQualiteAir;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="COULEUR_CARTE_GE", type="string", length=255, nullable=false)
-     */
-    private $couleurCarteGe;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="LIBELLE_POLLUANT_RESPONSABLE", type="string", length=255, nullable=false)
-     */
-    private $libellePolluantResponsable;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="NOTATION_POLLUANT_RESPONSABLE", type="string", length=255, nullable=false)
-     */
-    private $notationPolluantResponsable;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
-
-
-
-    /**
-     * Set codeInsee
+     * Set codeInsee.
      *
      * @param string $codeInsee
      *
@@ -157,7 +120,7 @@ class Information
     }
 
     /**
-     * Get codeInsee
+     * Get codeInsee.
      *
      * @return string
      */
@@ -167,7 +130,7 @@ class Information
     }
 
     /**
-     * Set commune
+     * Set commune.
      *
      * @param string $commune
      *
@@ -181,7 +144,7 @@ class Information
     }
 
     /**
-     * Get commune
+     * Get commune.
      *
      * @return string
      */
@@ -191,7 +154,7 @@ class Information
     }
 
     /**
-     * Set centroidXEtrs3035
+     * Set centroidXEtrs3035.
      *
      * @param string $centroidXEtrs3035
      *
@@ -205,7 +168,7 @@ class Information
     }
 
     /**
-     * Get centroidXEtrs3035
+     * Get centroidXEtrs3035.
      *
      * @return string
      */
@@ -215,7 +178,7 @@ class Information
     }
 
     /**
-     * Set centroidYEtrs3035
+     * Set centroidYEtrs3035.
      *
      * @param string $centroidYEtrs3035
      *
@@ -229,7 +192,7 @@ class Information
     }
 
     /**
-     * Get centroidYEtrs3035
+     * Get centroidYEtrs3035.
      *
      * @return string
      */
@@ -239,324 +202,146 @@ class Information
     }
 
     /**
-     * Set dateIndiceSupervise
+     * Set dATEINDICESUPERVISE.
      *
-     * @param \DateTime $dateIndiceSupervise
+     * @param \DateTime $dATEINDICESUPERVISE
      *
      * @return Information
      */
-    public function setDateIndiceSupervise($dateIndiceSupervise)
+    public function setDATEINDICESUPERVISE($dATEINDICESUPERVISE)
     {
-        $this->dateIndiceSupervise = $dateIndiceSupervise;
+        $this->dATEINDICESUPERVISE = $dATEINDICESUPERVISE;
 
         return $this;
     }
 
     /**
-     * Get dateIndiceSupervise
+     * Get dATEINDICESUPERVISE.
      *
      * @return \DateTime
      */
-    public function getDateIndiceSupervise()
+    public function getDATEINDICESUPERVISE()
     {
-        return $this->dateIndiceSupervise;
+        return $this->dATEINDICESUPERVISE;
     }
 
     /**
-     * Set echeance
+     * Set eCHEANCE.
      *
-     * @param string $echeance
+     * @param string $eCHEANCE
      *
      * @return Information
      */
-    public function setEcheance($echeance)
+    public function setECHEANCE($eCHEANCE)
     {
-        $this->echeance = $echeance;
+        $this->eCHEANCE = $eCHEANCE;
 
         return $this;
     }
 
     /**
-     * Get echeance
+     * Get eCHEANCE.
      *
      * @return string
      */
-    public function getEcheance()
+    public function getECHEANCE()
     {
-        return $this->echeance;
+        return $this->eCHEANCE;
     }
 
     /**
-     * Set dateEcheance
+     * Set dATEECHEANCE.
      *
-     * @param \DateTime $dateEcheance
+     * @param \DateTime $dATEECHEANCE
      *
      * @return Information
      */
-    public function setDateEcheance($dateEcheance)
+    public function setDATEECHEANCE($dATEECHEANCE)
     {
-        $this->dateEcheance = $dateEcheance;
+        $this->dATEECHEANCE = $dATEECHEANCE;
 
         return $this;
     }
 
     /**
-     * Get dateEcheance
+     * Get dATEECHEANCE.
      *
      * @return \DateTime
      */
-    public function getDateEcheance()
+    public function getDATEECHEANCE()
     {
-        return $this->dateEcheance;
+        return $this->dATEECHEANCE;
     }
 
     /**
-     * Set valeurSsindiceNo2
+     * Set lIBELLEQUALITEAIR.
      *
-     * @param string $valeurSsindiceNo2
+     * @param string $lIBELLEQUALITEAIR
      *
      * @return Information
      */
-    public function setValeurSsindiceNo2($valeurSsindiceNo2)
+    public function setLIBELLEQUALITEAIR($lIBELLEQUALITEAIR)
     {
-        $this->valeurSsindiceNo2 = $valeurSsindiceNo2;
+        $this->lIBELLEQUALITEAIR = $lIBELLEQUALITEAIR;
 
         return $this;
     }
 
     /**
-     * Get valeurSsindiceNo2
+     * Get lIBELLEQUALITEAIR.
      *
      * @return string
      */
-    public function getValeurSsindiceNo2()
+    public function getLIBELLEQUALITEAIR()
     {
-        return $this->valeurSsindiceNo2;
+        return $this->lIBELLEQUALITEAIR;
     }
 
     /**
-     * Set valeurSsindiceO3
+     * Set cOULEURCARTEGE.
      *
-     * @param integer $valeurSsindiceO3
+     * @param string $cOULEURCARTEGE
      *
      * @return Information
      */
-    public function setValeurSsindiceO3($valeurSsindiceO3)
+    public function setCOULEURCARTEGE($cOULEURCARTEGE)
     {
-        $this->valeurSsindiceO3 = $valeurSsindiceO3;
+        $this->cOULEURCARTEGE = $cOULEURCARTEGE;
 
         return $this;
     }
 
     /**
-     * Get valeurSsindiceO3
-     *
-     * @return integer
-     */
-    public function getValeurSsindiceO3()
-    {
-        return $this->valeurSsindiceO3;
-    }
-
-    /**
-     * Set valeurSsindicePm10
-     *
-     * @param integer $valeurSsindicePm10
-     *
-     * @return Information
-     */
-    public function setValeurSsindicePm10($valeurSsindicePm10)
-    {
-        $this->valeurSsindicePm10 = $valeurSsindicePm10;
-
-        return $this;
-    }
-
-    /**
-     * Get valeurSsindicePm10
-     *
-     * @return integer
-     */
-    public function getValeurSsindicePm10()
-    {
-        return $this->valeurSsindicePm10;
-    }
-
-    /**
-     * Set valeurSsindiceSo2
-     *
-     * @param string $valeurSsindiceSo2
-     *
-     * @return Information
-     */
-    public function setValeurSsindiceSo2($valeurSsindiceSo2)
-    {
-        $this->valeurSsindiceSo2 = $valeurSsindiceSo2;
-
-        return $this;
-    }
-
-    /**
-     * Get valeurSsindiceSo2
+     * Get cOULEURCARTEGE.
      *
      * @return string
      */
-    public function getValeurSsindiceSo2()
+    public function getCOULEURCARTEGE()
     {
-        return $this->valeurSsindiceSo2;
+        return $this->cOULEURCARTEGE;
     }
 
     /**
-     * Set libelleIndice
+     * Set lIBELLEPOLLUANTRESPONSABLE.
      *
-     * @param string $libelleIndice
+     * @param string $lIBELLEPOLLUANTRESPONSABLE
      *
      * @return Information
      */
-    public function setLibelleIndice($libelleIndice)
+    public function setLIBELLEPOLLUANTRESPONSABLE($lIBELLEPOLLUANTRESPONSABLE)
     {
-        $this->libelleIndice = $libelleIndice;
+        $this->lIBELLEPOLLUANTRESPONSABLE = $lIBELLEPOLLUANTRESPONSABLE;
 
         return $this;
     }
 
     /**
-     * Get libelleIndice
+     * Get lIBELLEPOLLUANTRESPONSABLE.
      *
      * @return string
      */
-    public function getLibelleIndice()
+    public function getLIBELLEPOLLUANTRESPONSABLE()
     {
-        return $this->libelleIndice;
-    }
-
-    /**
-     * Set libelleFamilleIndice
-     *
-     * @param string $libelleFamilleIndice
-     *
-     * @return Information
-     */
-    public function setLibelleFamilleIndice($libelleFamilleIndice)
-    {
-        $this->libelleFamilleIndice = $libelleFamilleIndice;
-
-        return $this;
-    }
-
-    /**
-     * Get libelleFamilleIndice
-     *
-     * @return string
-     */
-    public function getLibelleFamilleIndice()
-    {
-        return $this->libelleFamilleIndice;
-    }
-
-    /**
-     * Set libelleQualiteAir
-     *
-     * @param string $libelleQualiteAir
-     *
-     * @return Information
-     */
-    public function setLibelleQualiteAir($libelleQualiteAir)
-    {
-        $this->libelleQualiteAir = $libelleQualiteAir;
-
-        return $this;
-    }
-
-    /**
-     * Get libelleQualiteAir
-     *
-     * @return string
-     */
-    public function getLibelleQualiteAir()
-    {
-        return $this->libelleQualiteAir;
-    }
-
-    /**
-     * Set couleurCarteGe
-     *
-     * @param string $couleurCarteGe
-     *
-     * @return Information
-     */
-    public function setCouleurCarteGe($couleurCarteGe)
-    {
-        $this->couleurCarteGe = $couleurCarteGe;
-
-        return $this;
-    }
-
-    /**
-     * Get couleurCarteGe
-     *
-     * @return string
-     */
-    public function getCouleurCarteGe()
-    {
-        return $this->couleurCarteGe;
-    }
-
-    /**
-     * Set libellePolluantResponsable
-     *
-     * @param string $libellePolluantResponsable
-     *
-     * @return Information
-     */
-    public function setLibellePolluantResponsable($libellePolluantResponsable)
-    {
-        $this->libellePolluantResponsable = $libellePolluantResponsable;
-
-        return $this;
-    }
-
-    /**
-     * Get libellePolluantResponsable
-     *
-     * @return string
-     */
-    public function getLibellePolluantResponsable()
-    {
-        return $this->libellePolluantResponsable;
-    }
-
-    /**
-     * Set notationPolluantResponsable
-     *
-     * @param string $notationPolluantResponsable
-     *
-     * @return Information
-     */
-    public function setNotationPolluantResponsable($notationPolluantResponsable)
-    {
-        $this->notationPolluantResponsable = $notationPolluantResponsable;
-
-        return $this;
-    }
-
-    /**
-     * Get notationPolluantResponsable
-     *
-     * @return string
-     */
-    public function getNotationPolluantResponsable()
-    {
-        return $this->notationPolluantResponsable;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
+        return $this->lIBELLEPOLLUANTRESPONSABLE;
     }
 }
