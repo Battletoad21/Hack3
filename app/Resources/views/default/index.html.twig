@@ -2,6 +2,44 @@
 
 {% block body %}
 
+        <div class="modal-dialog cascading-modal" role="document">
+
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header primary-color white-text">
+                    <h4 class="title">
+                        <i class="fa fa-pencil"></i> Ma Commune</h4>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+
+                    <!-- Material textarea message -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-pencil prefix"></i>
+                        <textarea type="search" id="rechercheCommune" class="md-textarea form-control"></textarea>
+
+                        <datalist class="mdb-autocomplete-wrap" id="insertCommune">
+
+                        </datalist>
+                        <label for="materialFormMessageModalEx1">Nom Commune</label>
+                    </div>
+
+                    <div class="text-center mt-4 mb-2">
+                        <button class="btn btn-primary">Envoyer
+                            <i class="fa fa-send ml-2"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+
 
 
 {% endblock %}
