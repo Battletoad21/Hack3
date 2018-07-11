@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Information</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ information.id }}</td>
+            </tr>
+            <tr>
+                <th>Codeinsee</th>
+                <td>{{ information.codeInsee }}</td>
+            </tr>
+            <tr>
+                <th>Commune</th>
+                <td>{{ information.commune }}</td>
+            </tr>
+            <tr>
+                <th>Centroidxetrs3035</th>
+                <td>{{ information.centroidXEtrs3035 }}</td>
+            </tr>
+            <tr>
+                <th>Centroidyetrs3035</th>
+                <td>{{ information.centroidYEtrs3035 }}</td>
+            </tr>
+            <tr>
+                <th>Dateindicesupervise</th>
+                <td>{% if information.dATEINDICESUPERVISE %}{{ information.dATEINDICESUPERVISE|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Echeance</th>
+                <td>{{ information.eCHEANCE }}</td>
+            </tr>
+            <tr>
+                <th>Dateecheance</th>
+                <td>{% if information.dATEECHEANCE %}{{ information.dATEECHEANCE|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindiceno2</th>
+                <td>{{ information.vALEURSSINDICENO2 }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindiceo3</th>
+                <td>{{ information.vALEURSSINDICEO3 }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindicepm10</th>
+                <td>{{ information.vALEURSSINDICEPM10 }}</td>
+            </tr>
+            <tr>
+                <th>Valeurssindiceso2</th>
+                <td>{{ information.vALEURSSINDICESO2 }}</td>
+            </tr>
+            <tr>
+                <th>Libelleindice</th>
+                <td>{{ information.lIBELLEINDICE }}</td>
+            </tr>
+            <tr>
+                <th>Libellefamilleindice</th>
+                <td>{{ information.lIBELLEFAMILLEINDICE }}</td>
+            </tr>
+            <tr>
+                <th>Libellequaliteair</th>
+                <td>{{ information.lIBELLEQUALITEAIR }}</td>
+            </tr>
+            <tr>
+                <th>Couleurcartege</th>
+                <td>{{ information.cOULEURCARTEGE }}</td>
+            </tr>
+            <tr>
+                <th>Libellepolluantresponsable</th>
+                <td>{{ information.lIBELLEPOLLUANTRESPONSABLE }}</td>
+            </tr>
+            <tr>
+                <th>Notationpolluantresponsable</th>
+                <td>{{ information.nOTATIONPOLLUANTRESPONSABLE }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('information_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('information_edit', { 'id': information.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

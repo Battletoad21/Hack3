@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Information list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Codeinsee</th>
+                <th>Commune</th>
+                <th>Centroidxetrs3035</th>
+                <th>Centroidyetrs3035</th>
+                <th>Dateindicesupervise</th>
+                <th>Echeance</th>
+                <th>Dateecheance</th>
+                <th>Valeurssindiceno2</th>
+                <th>Valeurssindiceo3</th>
+                <th>Valeurssindicepm10</th>
+                <th>Valeurssindiceso2</th>
+                <th>Libelleindice</th>
+                <th>Libellefamilleindice</th>
+                <th>Libellequaliteair</th>
+                <th>Couleurcartege</th>
+                <th>Libellepolluantresponsable</th>
+                <th>Notationpolluantresponsable</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for information in information %}
+            <tr>
+                <td><a href="{{ path('information_show', { 'id': information.id }) }}">{{ information.id }}</a></td>
+                <td>{{ information.codeInsee }}</td>
+                <td>{{ information.commune }}</td>
+                <td>{{ information.centroidXEtrs3035 }}</td>
+                <td>{{ information.centroidYEtrs3035 }}</td>
+                <td>{% if information.dATEINDICESUPERVISE %}{{ information.dATEINDICESUPERVISE|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ information.eCHEANCE }}</td>
+                <td>{% if information.dATEECHEANCE %}{{ information.dATEECHEANCE|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ information.vALEURSSINDICENO2 }}</td>
+                <td>{{ information.vALEURSSINDICEO3 }}</td>
+                <td>{{ information.vALEURSSINDICEPM10 }}</td>
+                <td>{{ information.vALEURSSINDICESO2 }}</td>
+                <td>{{ information.lIBELLEINDICE }}</td>
+                <td>{{ information.lIBELLEFAMILLEINDICE }}</td>
+                <td>{{ information.lIBELLEQUALITEAIR }}</td>
+                <td>{{ information.cOULEURCARTEGE }}</td>
+                <td>{{ information.lIBELLEPOLLUANTRESPONSABLE }}</td>
+                <td>{{ information.nOTATIONPOLLUANTRESPONSABLE }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('information_show', { 'id': information.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('information_edit', { 'id': information.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('information_new') }}">Create a new information</a>
+        </li>
+    </ul>
+{% endblock %}
