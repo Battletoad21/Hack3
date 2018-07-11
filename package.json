@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "webpack-notifier": "^1.6.0"
+  },
+  "name": "hackathon3",
+  "description": "",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zowac/Hackathon3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zowac/Hackathon3/issues"
+  },
+  "homepage": "https://github.com/Zowac/Hackathon3#readme"
+}
