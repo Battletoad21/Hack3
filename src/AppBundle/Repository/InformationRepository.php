@@ -10,7 +10,9 @@ namespace AppBundle\Repository;
  */
 class InformationRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findInfosByAdresse($adresse){
+
+    public function findInfosByAdresse($adresse)
+    {
         $fields = array('i.commune');
         return $this->createQueryBuilder('i')
             ->select($fields)
@@ -22,8 +24,9 @@ class InformationRepository extends \Doctrine\ORM\EntityRepository
             ;
     }
 
-    public function findInfosByCommune($commune){
-        $fields = array('i.codeInsee','i.commune','i.centroidXEtrs3035','i.centroidYEtrs3035','i.dATEINDICESUPERVISE','i.eCHEANCE','i.dATEECHEANCE','i.lIBELLEQUALITEAIR','i.cOULEURCARTEGE','i.lIBELLEPOLLUANTRESPONSABLE');
+    public function findInfosByCommune($commune)
+    {
+        $fields = array('i.codeInsee','i.commune','i.centroidXEtrs3035','i.centroidYEtrs3035','i.dateIndiceSupervise','i.echeance','i.dateEcheance','i.libelleQualiteAir','i.couleurCarteGe','i.libellePolluantResponsable');
         return $this->createQueryBuilder('i')
             ->select($fields)
             ->andWhere('i.commune = :commune')

@@ -2,6 +2,7 @@
 
 {% block body %}
 
+
         <div class="modal-dialog cascading-modal" role="document">
 
             <!--Content-->
@@ -10,37 +11,33 @@
                 <!--Header-->
                 <div class="modal-header primary-color white-text">
                     <h4 class="title">
-                        <i class="fa fa-pencil"></i> Ma Commune</h4>
-                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+                        <i class="fa fa-map-marker"></i> Ma Commune</h4>
                 </div>
                 <!--Body-->
                 <div class="modal-body">
                     <h3 class="text-center">Trouvez votre commune</h3>
                     <!-- Material textarea message -->
-                    <form method="post" action="/infos">
-                        <div class="md-form form-sm">
-                            <i class="fa fa-pencil prefix"></i>
-                            <input type="text" id="rechercheCommune" name="communeInfos" list="insertCommune" class="md-textarea form-control">
-                            <label for="materialFormMessageModalEx1"></label>
-                            <datalist class="mdb-autocomplete-wrap" id="insertCommune">
 
-                            </datalist>
+                    <form action="information/infos" method="post" class="md-form form-sm">
+                        <i class="fa fa-pencil prefix"></i>
+                        <input type="text" name="commune" id="rechercheCommune" list="insertCommune" class="md-textarea form-control">
+                        <label for="materialFormMessageModalEx1"></label>
+                        <datalist class="mdb-autocomplete-wrap" id="insertCommune">
 
-                        </div>
+                        </datalist>
 
-                        <div class="text-center mt-4 mb-2">
-                            <button type="submit" class="btn btn-primary">Envoyer
-                                <i class="fa fa-send ml-2"></i>
-                            </button>
-                        </div>
+
+                    <div class="text-center mt-4 mb-2">
+                        <button class="btn btn-primary">Envoyer
+                            <i class="fa fa-send ml-2"></i>
+                        </button>
+                    </div>
                     </form>
+
                 </div>
             </div>
             <!--/.Content-->
         </div>
-
 
 
 {% endblock %}

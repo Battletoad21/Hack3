@@ -31,4 +31,5 @@ class DefaultController extends Controller
         return $this->render('default/info.html.twig',['com'=>$com]);
 
     }
+
 }

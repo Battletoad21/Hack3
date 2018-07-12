@@ -26,7 +26,7 @@ class Information
      *
      * @ORM\Column(name="code_insee", type="string", length=255)
      */
-    private $codeInsee;
+    public $codeInsee;
 
     /**
      * @var string
@@ -54,56 +54,46 @@ class Information
      *
      * @ORM\Column(name="DATE_INDICE_SUPERVISE", type="datetime")
      */
-    private $dATEINDICESUPERVISE;
+    private $dateIndiceSupervise;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ECHEANCE", type="string", length=255)
      */
-    private $eCHEANCE;
+    private $echeance;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="DATE_ECHEANCE", type="datetime")
      */
-
-    private $dATEECHEANCE;
-
-
+    private $dateEcheance;
 
     /**
      * @var string
      *
-
-     * @ORM\Column(name="LIBELLE_QUALITE_AIR", type="string", length=255)
+     * @ORM\Column(name="LIBELLE_QUALITE_AIR", type="string", length=255, nullable=false)
      */
-    private $lIBELLEQUALITEAIR;
-
+    private $libelleQualiteAir;
 
     /**
      * @var string
      *
-
-     * @ORM\Column(name="COULEUR_CARTE_GE", type="string", length=255)
+     * @ORM\Column(name="COULEUR_CARTE_GE", type="string", length=255, nullable=false)
      */
-    private $cOULEURCARTEGE;
-
+    private $couleurCarteGe;
 
     /**
      * @var string
      *
-
-     * @ORM\Column(name="LIBELLE_POLLUANT_RESPONSABLE", type="string", length=255)
+     * @ORM\Column(name="LIBELLE_POLLUANT_RESPONSABLE", type="string", length=255, nullable=false)
      */
-    private $lIBELLEPOLLUANTRESPONSABLE;
+    private $libellePolluantResponsable;
 
-
-
+    
 
     /**
-
      * Get id.
      *
      * @return int
@@ -210,154 +200,146 @@ class Information
     }
 
     /**
-     * Set dATEINDICESUPERVISE.
+     * Set dateIndiceSupervise.
      *
-     * @param \DateTime $dATEINDICESUPERVISE
+     * @param \DateTime $dateIndiceSupervise
      *
      * @return Information
      */
-    public function setDATEINDICESUPERVISE($dATEINDICESUPERVISE)
+    public function setDateIndiceSupervise($dateIndiceSupervise)
     {
-        $this->dATEINDICESUPERVISE = $dATEINDICESUPERVISE;
+        $this->dateIndiceSupervise = $dateIndiceSupervise;
 
         return $this;
     }
 
     /**
-     * Get dATEINDICESUPERVISE.
+     * Get dateIndiceSupervise.
      *
      * @return \DateTime
      */
-    public function getDATEINDICESUPERVISE()
+    public function getDateIndiceSupervise()
     {
-        return $this->dATEINDICESUPERVISE;
+        return $this->dateIndiceSupervise;
     }
 
     /**
-     * Set eCHEANCE.
+     * Set echeance.
      *
-     * @param string $eCHEANCE
+     * @param string $echeance
      *
      * @return Information
      */
-    public function setECHEANCE($eCHEANCE)
+    public function setEcheance($echeance)
     {
-        $this->eCHEANCE = $eCHEANCE;
+        $this->echeance = $echeance;
 
         return $this;
     }
 
     /**
-     * Get eCHEANCE.
+     * Get echeance.
      *
      * @return string
      */
-    public function getECHEANCE()
+    public function getEcheance()
     {
-        return $this->eCHEANCE;
+        return $this->echeance;
     }
 
     /**
-     * Set dATEECHEANCE.
+     * Set dateEcheance.
      *
-     * @param \DateTime $dATEECHEANCE
+     * @param \DateTime $dateEcheance
      *
      * @return Information
      */
-    public function setDATEECHEANCE($dATEECHEANCE)
+    public function setDateEcheance($dateEcheance)
     {
-        $this->dATEECHEANCE = $dATEECHEANCE;
-
+        $this->dateEcheance = $dateEcheance;
 
         return $this;
     }
 
     /**
-
-     * Get dATEECHEANCE.
+     * Get dateEcheance.
      *
      * @return \DateTime
      */
-    public function getDATEECHEANCE()
+    public function getDateEcheance()
     {
-        return $this->dATEECHEANCE;
+        return $this->dateEcheance;
     }
 
     /**
-     * Set lIBELLEQUALITEAIR.
+     * Set libelleQualiteAir.
      *
-     * @param string $lIBELLEQUALITEAIR
+     * @param string $libelleQualiteAir
      *
      * @return Information
      */
-    public function setLIBELLEQUALITEAIR($lIBELLEQUALITEAIR)
+    public function setLibelleQualiteAir($libelleQualiteAir)
     {
-        $this->lIBELLEQUALITEAIR = $lIBELLEQUALITEAIR;
-
+        $this->libelleQualiteAir = $libelleQualiteAir;
 
         return $this;
     }
 
     /**
-
-     * Get lIBELLEQUALITEAIR.
+     * Get libelleQualiteAir.
      *
      * @return string
      */
-    public function getLIBELLEQUALITEAIR()
+    public function getLibelleQualiteAir()
     {
-        return $this->lIBELLEQUALITEAIR;
+        return $this->libelleQualiteAir;
     }
 
     /**
-     * Set cOULEURCARTEGE.
+     * Set couleurCarteGe.
      *
-     * @param string $cOULEURCARTEGE
+     * @param string $couleurCarteGe
      *
      * @return Information
      */
-    public function setCOULEURCARTEGE($cOULEURCARTEGE)
+    public function setCouleurCarteGe($couleurCarteGe)
     {
-        $this->cOULEURCARTEGE = $cOULEURCARTEGE;
-
+        $this->couleurCarteGe = $couleurCarteGe;
 
         return $this;
     }
 
     /**
-
-     * Get cOULEURCARTEGE.
+     * Get couleurCarteGe.
      *
      * @return string
      */
-    public function getCOULEURCARTEGE()
+    public function getCouleurCarteGe()
     {
-        return $this->cOULEURCARTEGE;
+        return $this->couleurCarteGe;
     }
 
     /**
-     * Set lIBELLEPOLLUANTRESPONSABLE.
+     * Set libellePolluantResponsable.
      *
-     * @param string $lIBELLEPOLLUANTRESPONSABLE
+     * @param string $libellePolluantResponsable
      *
      * @return Information
      */
-    public function setLIBELLEPOLLUANTRESPONSABLE($lIBELLEPOLLUANTRESPONSABLE)
+    public function setLibellePolluantResponsable($libellePolluantResponsable)
     {
-        $this->lIBELLEPOLLUANTRESPONSABLE = $lIBELLEPOLLUANTRESPONSABLE;
-
+        $this->libellePolluantResponsable = $libellePolluantResponsable;
 
         return $this;
     }
 
     /**
-     * Get lIBELLEPOLLUANTRESPONSABLE.
+     * Get libellePolluantResponsable.
      *
      * @return string
      */
-    public function getLIBELLEPOLLUANTRESPONSABLE()
+    public function getLibellePolluantResponsable()
     {
-        return $this->lIBELLEPOLLUANTRESPONSABLE;
-
+        return $this->libellePolluantResponsable;
     }
 }
