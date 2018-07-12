@@ -28,10 +28,11 @@
 
     <body>
 
-        {% include 'header.html.twig' %}
+
 
 
         {% block body %}{% endblock %}
+        {% include 'header.html.twig' %}
         {% block javascripts %}{% endblock %}
         {% include 'footer.html.twig' %}
         <script src="{{ asset('build/app.js') }}"></script>
