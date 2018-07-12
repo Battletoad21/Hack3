@@ -1,0 +1,18 @@
+body {
+  background-image: url("https://media.giphy.com/media/b5xDLakZRxJ6M/giphy.gif");
+  background-size: cover;
+}
+
+.modal-dialog.cascading-modal {
+  margin-bottom: 14%;
+}
+
+.modal-header.white-text {
+  background-color: #263238;
+}
+
+.btn {
+  background-color: #263238;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3dpbGRlci9IMy9IYWNrYXRob24zL2Fzc2V0cy9zY3NzL2luZGV4LnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiYm9keXtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaHR0cHM6Ly9tZWRpYS5naXBoeS5jb20vbWVkaWEvYjV4RExha1pSeEo2TS9naXBoeS5naWZcIik7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbi5tb2RhbC1kaWFsb2cuY2FzY2FkaW5nLW1vZGFse1xuICBtYXJnaW4tYm90dG9tOiAxNCU7XG59XG5cbi5tb2RhbC1oZWFkZXIud2hpdGUtdGV4dHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI2MzIzODtcbn1cblxuLmJ0bntcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI2MzIzODtcbn1cblxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLEFBQUEsSUFBSSxDQUFBO0VBQ0YsZ0JBQWdCLEVBQUUsNERBQTREO0VBQzlFLGVBQWUsRUFBRSxLQUFLLEdBQ3ZCOztBQUVELEFBQUEsYUFBYSxBQUFBLGdCQUFnQixDQUFBO0VBQzNCLGFBQWEsRUFBRSxHQUFHLEdBQ25COztBQUVELEFBQUEsYUFBYSxBQUFBLFdBQVcsQ0FBQTtFQUN0QixnQkFBZ0IsRUFBRSxPQUFPLEdBQzFCOztBQUVELEFBQUEsSUFBSSxDQUFBO0VBQ0YsZ0JBQWdCLEVBQUUsT0FBTyxHQUMxQiJ9 */

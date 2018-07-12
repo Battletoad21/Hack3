@@ -1,15 +1,21 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/index.css') }}">
+{% endblock %}
+
 {% block body %}
 
 
+
+<div class="wut">
         <div class="modal-dialog cascading-modal" role="document">
 
             <!--Content-->
             <div class="modal-content">
 
                 <!--Header-->
-                <div class="modal-header primary-color white-text">
+                <div class="modal-header white-text">
                     <h4 class="title">
                         <i class="fa fa-map-marker"></i> Ma Commune</h4>
                 </div>
@@ -28,7 +34,7 @@
 
 
                     <div class="text-center mt-4 mb-2">
-                        <button class="btn btn-primary">Envoyer
+                        <button class="btn">Envoyer
                             <i class="fa fa-send ml-2"></i>
                         </button>
                     </div>
@@ -38,10 +44,7 @@
             </div>
             <!--/.Content-->
         </div>
-
-
-{% endblock %}
-
-{% block stylesheets %}
+</div>
 
 {% endblock %}
+
