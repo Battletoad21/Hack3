@@ -76,4 +76,21 @@
             </div>
         </div>
     </div>
+
+
+    <script src="https://tile.openweathermap.org/map/temp_new/{z}/{{ lat }}/{{ lon }}.png?appid=fe91bbffe0d55e315b99a3727c6876be"></script>
+
+{% endblock %}
+
+{% block javascript %}
+
+
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:5,
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+
 {% endblock %}
