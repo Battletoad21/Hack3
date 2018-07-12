@@ -72,9 +72,19 @@ class InformationController extends Controller
 
         $information = $em->getRepository('AppBundle:Information')->findInfosByCommune($commune);
         $reponse_API = $weather->getCurrent($commune);
+        $lat=$reponse_API['data']['coord']['lat'];
+        $lon= $reponse_API['data']['coord']['lon'];
+
+      
+
+
+
+
         return $this->render('default/info.html.twig', [
             'test' => $information,
             'data'=>$reponse_API,
+            'lat'=>$lat,
+            'lon'=>$lon
         ]);
 
     }
