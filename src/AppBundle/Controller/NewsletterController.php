@@ -1,7 +1,7 @@
 <?php
 
 namespace AppBundle\Controller;
-
+use AppBundle\Service\Weather;
 use AppBundle\Entity\Newsletter;
 use AppBundle\Service\Mailer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -38,7 +38,7 @@ class NewsletterController extends Controller
      * @Route("/new", name="newsletter_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request,Mailer $mailer)
+    public function newAction(Request $request,Mailer $mailer,Weather $weather)
     {
         $newsletter = new Newsletter();
         $form = $this->createForm('AppBundle\Form\NewsletterType', $newsletter);
@@ -48,15 +48,21 @@ class NewsletterController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsletter);
             $em->flush();
-        $mailer->sendEmail($newsletter->getEmail(),$newsletter->getCommune());
-            return $this->redirectToRoute('newsletter_show', array('id' => $newsletter->getId()));
+            $data = $weather->getCurrent($newsletter->getCommune());
+
+        $mailer->sendEmail($newsletter->getEmail(),$newsletter->getCommune(),$data);
+
+
+
         }
 
         return $this->render('newsletter/new.html.twig', array(
             'newsletter' => $newsletter,
             'form' => $form->createView(),
+
         ));
     }
+
 
     /**
      * Finds and displays a newsletter entity.

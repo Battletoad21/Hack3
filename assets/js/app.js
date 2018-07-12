@@ -23,12 +23,12 @@ function showCommune() {
 
 //-------------------------- list commune newsletter -----------------------
 
-$('#rechercheCommuneNews').keyup(showCommuneNew);
+$('#appbundle_newsletter_email').keyup(showCommuneNew);
 
 
 
 function showCommuneNew() {
-    var str = $('#rechercheCommuneNews').val();
+    var str = $('#appbundle_newsletter_email').val();
     console.log('ok comu');
     if (str.length !== 0) {
         $.get( "http://localhost:8000/information/find/"+str, function( data ) {
