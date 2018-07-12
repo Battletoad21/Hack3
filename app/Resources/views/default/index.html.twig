@@ -11,10 +11,7 @@
                 <!--Header-->
                 <div class="modal-header primary-color white-text">
                     <h4 class="title">
-                        <i class="fa fa-pencil"></i> Ma Commune</h4>
-                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+                        <i class="fa fa-map-marker"></i> Ma Commune</h4>
                 </div>
                 <!--Body-->
                 <div class="modal-body">
@@ -22,12 +19,11 @@
                     <!-- Material textarea message -->
                     <div class="md-form form-sm">
                         <i class="fa fa-pencil prefix"></i>
-                        <textarea type="search" id="rechercheCommune" class="md-textarea form-control"></textarea>
+                        <input type="text" name="test" list="insertCommune" id="rechercheCommune" class="md-textarea form-control">
 
                         <datalist class="mdb-autocomplete-wrap" id="insertCommune">
 
                         </datalist>
-                        <label for="materialFormMessageModalEx1">Nom Commune</label>
                     </div>
 
                     <div class="text-center mt-4 mb-2">
@@ -41,10 +37,6 @@
             <!--/.Content-->
         </div>
 
-            </div>
-
-        </div>
-    </div>
 
 {% endblock %}
 
