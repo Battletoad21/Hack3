@@ -26,7 +26,7 @@ class Information
      *
      * @ORM\Column(name="code_insee", type="string", length=255)
      */
-    private $codeInsee;
+    public $codeInsee;
 
     /**
      * @var string
@@ -91,8 +91,20 @@ class Information
      */
     private $libellePolluantResponsable;
 
+    
+
     /**
-     * Set codeInsee
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set codeInsee.
      *
      * @param string $codeInsee
      *
@@ -106,7 +118,7 @@ class Information
     }
 
     /**
-     * Get codeInsee
+     * Get codeInsee.
      *
      * @return string
      */
@@ -116,7 +128,7 @@ class Information
     }
 
     /**
-     * Set commune
+     * Set commune.
      *
      * @param string $commune
      *
@@ -130,7 +142,7 @@ class Information
     }
 
     /**
-     * Get commune
+     * Get commune.
      *
      * @return string
      */
@@ -140,7 +152,7 @@ class Information
     }
 
     /**
-     * Set centroidXEtrs3035
+     * Set centroidXEtrs3035.
      *
      * @param string $centroidXEtrs3035
      *
@@ -154,7 +166,7 @@ class Information
     }
 
     /**
-     * Get centroidXEtrs3035
+     * Get centroidXEtrs3035.
      *
      * @return string
      */
@@ -164,7 +176,7 @@ class Information
     }
 
     /**
-     * Set centroidYEtrs3035
+     * Set centroidYEtrs3035.
      *
      * @param string $centroidYEtrs3035
      *
@@ -178,7 +190,7 @@ class Information
     }
 
     /**
-     * Get centroidYEtrs3035
+     * Get centroidYEtrs3035.
      *
      * @return string
      */
@@ -188,7 +200,7 @@ class Information
     }
 
     /**
-     * Set dateIndiceSupervise
+     * Set dateIndiceSupervise.
      *
      * @param \DateTime $dateIndiceSupervise
      *
@@ -202,7 +214,7 @@ class Information
     }
 
     /**
-     * Get dateIndiceSupervise
+     * Get dateIndiceSupervise.
      *
      * @return \DateTime
      */
@@ -212,7 +224,7 @@ class Information
     }
 
     /**
-     * Set echeance
+     * Set echeance.
      *
      * @param string $echeance
      *
@@ -226,7 +238,7 @@ class Information
     }
 
     /**
-     * Get echeance
+     * Get echeance.
      *
      * @return string
      */
@@ -236,7 +248,7 @@ class Information
     }
 
     /**
-     * Set dateEcheance
+     * Set dateEcheance.
      *
      * @param \DateTime $dateEcheance
      *
@@ -250,7 +262,7 @@ class Information
     }
 
     /**
-     * Get dateEcheance
+     * Get dateEcheance.
      *
      * @return \DateTime
      */
@@ -260,7 +272,7 @@ class Information
     }
 
     /**
-     * Set libelleQualiteAir
+     * Set libelleQualiteAir.
      *
      * @param string $libelleQualiteAir
      *
@@ -274,7 +286,7 @@ class Information
     }
 
     /**
-     * Get libelleQualiteAir
+     * Get libelleQualiteAir.
      *
      * @return string
      */
@@ -284,7 +296,7 @@ class Information
     }
 
     /**
-     * Set couleurCarteGe
+     * Set couleurCarteGe.
      *
      * @param string $couleurCarteGe
      *
@@ -298,7 +310,7 @@ class Information
     }
 
     /**
-     * Get couleurCarteGe
+     * Get couleurCarteGe.
      *
      * @return string
      */
@@ -308,7 +320,7 @@ class Information
     }
 
     /**
-     * Set libellePolluantResponsable
+     * Set libellePolluantResponsable.
      *
      * @param string $libellePolluantResponsable
      *
@@ -322,22 +334,12 @@ class Information
     }
 
     /**
-     * Get libellePolluantResponsable
+     * Get libellePolluantResponsable.
      *
      * @return string
      */
     public function getLibellePolluantResponsable()
     {
         return $this->libellePolluantResponsable;
-    }
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
     }
 }

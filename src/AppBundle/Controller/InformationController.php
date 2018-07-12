@@ -4,7 +4,6 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Information;
 
-use AppBundle\Repository\InformationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use JMS\Serializer\SerializerInterface;
@@ -58,10 +57,34 @@ class InformationController extends Controller
     }
 
     /**
+     * Lists all information entities.
+     *
+     * @Route("/infos", name="information_commune")
+     * @Method("POST")
+     * @param SerializerInterface $serializer
+     * @return Response
+     */
+    public function findInfoAction()
+    {
+        $commune = $_POST['commune'];
+
+        $em = $this->getDoctrine()->getManager();
+
+        $information = $em->getRepository('AppBundle:Information')->findInfosByCommune($commune);
+
+        return $this->render('default/info.html.twig', [
+            'test' => $information
+        ]);
+
+    }
+
+    /**
      * Creates a new information entity.
      *
      * @Route("/new", name="information_new")
      * @Method({"GET", "POST"})
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
     public function newAction(Request $request)
     {
@@ -88,6 +111,8 @@ class InformationController extends Controller
      *
      * @Route("/{id}", name="information_show")
      * @Method("GET")
+     * @param Information $information
+     * @return Response
      */
     public function showAction(Information $information)
     {
@@ -104,6 +129,9 @@ class InformationController extends Controller
      *
      * @Route("/{id}/edit", name="information_edit")
      * @Method({"GET", "POST"})
+     * @param Request $request
+     * @param Information $information
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
     public function editAction(Request $request, Information $information)
     {
@@ -129,6 +157,9 @@ class InformationController extends Controller
      *
      * @Route("/{id}", name="information_delete")
      * @Method("DELETE")
+     * @param Request $request
+     * @param Information $information
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request, Information $information)
     {
@@ -149,7 +180,7 @@ class InformationController extends Controller
      *
      * @param Information $information The information entity
      *
-     * @return \Symfony\Component\Form\Form The form
+     * @return \Symfony\Component\Form\FormInterface
      */
     private function createDeleteForm(Information $information)
     {

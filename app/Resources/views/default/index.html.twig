@@ -15,22 +15,23 @@
                 </div>
                 <!--Body-->
                 <div class="modal-body">
-
+                    <h3 class="text-center">Trouvez votre commune</h3>
                     <!-- Material textarea message -->
-                    <div class="md-form form-sm">
+                    <form action="information/infos" method="post" class="md-form form-sm">
                         <i class="fa fa-pencil prefix"></i>
-                        <input type="text" name="test" list="insertCommune" id="rechercheCommune" class="md-textarea form-control">
-
+                        <input type="text" name="commune" id="rechercheCommune" list="insertCommune" class="md-textarea form-control">
+                        <label for="materialFormMessageModalEx1"></label>
                         <datalist class="mdb-autocomplete-wrap" id="insertCommune">
 
                         </datalist>
-                    </div>
+
 
                     <div class="text-center mt-4 mb-2">
                         <button class="btn btn-primary">Envoyer
                             <i class="fa fa-send ml-2"></i>
                         </button>
                     </div>
+                    </form>
 
                 </div>
             </div>

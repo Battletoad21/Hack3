@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <a href="/"><p class="text-center">Retour à l'accueil</p></a>
+
+                <h2>Test</h2>
+                <table class="table table-stripped">
+                    <tr>
+                        <th>Code Insee</th>
+                        <th>Commune</th>
+                        <th>centroid X </th>
+                        <th>centroid Y </th>
+                        <th>Date Indice Supervise</th>
+                        <th>Echeance</th>
+                        <th>Date Echeance</th>
+                        <th>Libelle qualite air</th>
+                        <th>Libelle polluant responsable</th>
+                    </tr>
+                    {% for test in test %}
+                    <tr>
+                        <td>{{ test.codeInsee }}</td>
+                        <td>{{ test.commune }}</td>
+                        <td>{{ test.centroidXEtrs3035 }}</td>
+                        <td>{{ test.centroidYEtrs3035 }}</td>
+                        <td>{% if test.dateIndiceSupervise %}{{ test.dateIndiceSupervise|date('Y-m-d H:i:s') }}{% endif %}</td>
+                        <td>{{ test.echeance }}</td>
+                        <td>{% if test.dateEcheance %}{{ test.dateEcheance|date('Y-m-d H:i:s') }}{% endif %}</td>
+                        <td>{{ test.libelleQualiteAir }}</td>
+                        <td>{{ test.libellePolluantResponsable }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -10,12 +10,27 @@ namespace AppBundle\Repository;
  */
 class InformationRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findInfosByAdresse($adresse){
+
+    public function findInfosByAdresse($adresse)
+    {
         $fields = array('i.commune');
         return $this->createQueryBuilder('i')
-            ->select($fields)->distinct()
+            ->select($fields)
+            ->distinct()
             ->andWhere('i.commune LIKE :adresse')
             ->setParameter('adresse', '%'.$adresse.'%')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findInfosByCommune($commune)
+    {
+        $fields = array('i.codeInsee','i.commune','i.centroidXEtrs3035','i.centroidYEtrs3035','i.dateIndiceSupervise','i.echeance','i.dateEcheance','i.libelleQualiteAir','i.couleurCarteGe','i.libellePolluantResponsable');
+        return $this->createQueryBuilder('i')
+            ->select($fields)
+            ->andWhere('i.commune = :commune')
+            ->setParameter('commune', $commune)
             ->getQuery()
             ->getResult()
             ;
