@@ -6,17 +6,60 @@
         <div class="row">
             <div class="col-12">
                 <a href="/"><p class="text-center">Retour à l'accueil</p></a>
+                <section class="offset-4" style="border: 1px black;">
+    <div class="tamere" style="border-color: black">
+                    {% for data in data %}
+                        <div class="col-12">
 
-                <h2>Test</h2>
+
+                        <div class="row">
+                            <div style="background-color: orange" class="col-4">
+                                <h2 class="right">{{ data.name }}</h2>
+                                <h6>{{ data.weather.0.description }}</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h1 style="font-size: 50px; font-weight: bold; margin-top: 40px">{{ data.main.temp }}°C</h1>
+                                    </div>
+                                    <div style="font-size: 15px" class="col-4">
+                                        <p class="text-right">Details</p>
+                                        <hr>
+                                        <p style="margin: 0;" class="text-right">T° min : {{ data.main.temp_min }} </p>
+                                        <p style="margin: 0;" class="text-right">T° max : {{ data.main.temp_max }} </p>
+                                        <p style="margin: 0;" class="text-right">Humidité : {{ data.main.humidity }}% </p>
+                                        <p style="margin: 0;" class="text-right">Vent : {{ data.wind.speed }} m/s </p>
+                                    </div>
+                                </div>
+                            <div class="col-8">
+                                <hr>
+                                <p class="text-right">{{ "now"|date("m/d/Y H:i:s") }}</p>
+                            </div>
+                        </div>
+                        </section>
+                        </div>
+        </div>
+                        </div>
+
+
+
+                {#{{ dump(data) }}#}
+                        
+                    {% endfor %}
+
+
+
+
                 <table class="table table-stripped">
                     <tr>
                         <th>Code Insee</th>
                         <th>Commune</th>
-                        <th>Date Indice Supervise</th>
-                        <th>Echeance</th>
-                        <th>Date Echeance</th>
-                        <th>Libelle qualite air</th>
-                        <th>Libelle polluant responsable</th>
+                        <th>Date d'indice supervise</th>
+                        <th>Écheance</th>
+                        <th>Date d'echeance</th>
+                        <th>Qualité de l'air</th>
+                        <th>Polluant responsable</th>
                     </tr>
                     {% for test in test %}
                     <tr style="background-color: {{ test.couleurCarteGe }}">
