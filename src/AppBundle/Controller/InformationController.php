@@ -58,6 +58,28 @@ class InformationController extends Controller
     }
 
     /**
+     * Lists all information entities.
+     *
+     * @Route("/result/{commune}", name="information_commune")
+     * @Method("GET")
+     * @param $commune
+     * @param SerializerInterface $serializer
+     * @return Response
+     */
+    public function findInfoAction($commune, SerializerInterface $serializer)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $informations = $em->getRepository('AppBundle:Information')->findInfosByCommune($commune);
+        $data=$serializer->serialize($informations, 'json');
+
+        $response=new Response($data);
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
+
+    }
+
+    /**
      * Creates a new information entity.
      *
      * @Route("/new", name="information_new")
