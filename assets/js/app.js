@@ -2,8 +2,8 @@
 
 $('#rechercheCommune').keyup(showCommune);
 
-//commune List
-console.log('ok');
+//commune Listhttp://localhost:8000/
+
 function showCommune() {
     var str = $('#rechercheCommune').val();
     if (str.length !== 0) {

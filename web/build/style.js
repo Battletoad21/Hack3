@@ -60,36 +60,20 @@
 /******/ 	__webpack_require__.p = "/web/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/scss/style.scss");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/js/app.js":
-/*!**************************!*\
-  !*** ./assets/js/app.js ***!
-  \**************************/
+/***/ "./assets/scss/style.scss":
+/*!********************************!*\
+  !*** ./assets/scss/style.scss ***!
+  \********************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /***/ (function(module, exports) {
 
-//-------------------------- list copro -----------------------
-
-$('#rechercheCommune').keyup(showCommune);
-
-//commune Listhttp://localhost:8000/
-
-function showCommune() {
-    var str = $('#rechercheCommune').val();
-    if (str.length !== 0) {
-        $.get("http://localhost:8000/information/find/" + str, function (data) {
-            $("#insertCommune").html("");
-            $.each(data, function (key, value) {
-                $("#insertCommune").append("<option value='" + value['commune'] + "'>" + value["commune"] + "</option>");
-            });
-        });
-    }
-}
+// removed by extract-text-webpack-plugin
 
 /***/ })
 

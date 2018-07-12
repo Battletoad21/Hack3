@@ -22,9 +22,13 @@ class DefaultController extends Controller
     /**
      * @Route("/infos", name="infos_page")
      */
-    public function infoAction()
+    public function infoAction(Request $request)
     {
 
-        return $this->render('default/info.html.twig');
+
+
+
+        return $this->render('default/info.html.twig',['com'=>$com]);
+
     }
 }
