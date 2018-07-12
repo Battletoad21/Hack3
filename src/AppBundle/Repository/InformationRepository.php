@@ -31,6 +31,7 @@ class InformationRepository extends \Doctrine\ORM\EntityRepository
             ->select($fields)
             ->andWhere('i.commune = :commune')
             ->setParameter('commune', $commune)
+            ->OrderBy('i.dateEcheance')
             ->getQuery()
             ->getResult()
             ;
