@@ -3,7 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Information;
-
+use AppBundle\Service\Weather;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use JMS\Serializer\SerializerInterface;
@@ -64,19 +64,22 @@ class InformationController extends Controller
      * @param SerializerInterface $serializer
      * @return Response
      */
-    public function findInfoAction()
+    public function findInfoAction(Weather $weather)
     {
         $commune = $_POST['commune'];
 
         $em = $this->getDoctrine()->getManager();
 
         $information = $em->getRepository('AppBundle:Information')->findInfosByCommune($commune);
-
+        $reponse_API = $weather->getCurrent($commune);
         return $this->render('default/info.html.twig', [
-            'test' => $information
+            'test' => $information,
+            'data'=>$reponse_API,
         ]);
 
     }
+
+
 
     /**
      * Creates a new information entity.

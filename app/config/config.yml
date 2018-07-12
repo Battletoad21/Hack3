@@ -65,3 +65,9 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+csa_guzzle:
+    clients:
+        weather:
+            config:
+                base_uri: http://api.openweathermap.org
