@@ -1,16 +1,59 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Newsletter creation</h1>
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('newsletter_index') }}">Back to the list</a>
-        </li>
-    </ul>
+
+        <!--Modal: Contact form-->
+        <div class="modal-dialog cascading-modal" role="document">
+
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header primary-color white-text">
+                    <h4 class="title">
+                        <i class="fa fa-envelope-open "></i>Newsletter</h4>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    {{ form_start(form) }}
+                    <!-- Material input name -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-at prefix"></i>
+                        {{ form_widget(form.email, { 'attr': {'class': 'form-control form-control-sm'} }) }}
+                        <label for="materialFormNameModalEx1">Votre Email</label>
+                    </div>
+
+                    <!-- Material input email -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-street-view prefix"></i>
+                        {{ form_widget(form.codePostal, { 'attr': {'class': 'form-control form-control-sm'} }) }}
+                        <label for="materialFormEmailModalEx1">Code Postal</label>
+                    </div>
+
+                    <!-- Material input subject -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-map-signs   prefix"></i>
+                        {{ form_widget(form.commune, { 'attr': {'class': 'form-control form-control-sm'} }) }}
+                        <label for="materialFormSubjectModalEx1">Commune</label>
+                    </div>
+
+
+                    <div class="text-center mt-4 mb-2">
+                        <button class="btn btn-primary">Envoyer
+                            <i class="fa fa-send ml-2"></i>
+                        </button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+        <!--/Modal: Contact form-->
+
+
 {% endblock %}

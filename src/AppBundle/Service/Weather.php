@@ -20,7 +20,7 @@ class Weather
 
     public function getCurrent($commune)
     {
-        $uri = '/data/2.5/weather?q='.$commune.'&APPID='.$this->apiKey;
+        $uri = '/data/2.5/weather?q='.$commune.'&APPID='.$this->apiKey.'&units=metric';
         $response = $this->weatherClient->get($uri);
 
         $data = $this->serializer->deserialize($response->getBody()->getContents(), 'array', 'json');

@@ -15,21 +15,22 @@ class Mailer
     private $mailer;
     private $templating;
 
+
     public function __construct(\Swift_Mailer $mailer, \Twig_Environment $templating)
     {
         $this->mailer = $mailer;
         $this->templating = $templating;
+
+
     }
 
-    public function sendEmail($email,$commune)
+    public function sendEmail($email,$commune,$data)
     {
 
-        try {
-            $body = $this->templating->render('emails/send.html.twig', ['email' => $email, 'commune' => $commune,]);
-        } catch (\Twig_Error_Loader $e) {
-        } catch (\Twig_Error_Runtime $e) {
-        } catch (\Twig_Error_Syntax $e) {
-        }
+
+
+            $body = $this->templating->render('emails/send.html.twig', ['email' => $email, 'commune' => $commune, 'data' => $data]);
+
 
         $message = (new \Swift_Message('infoContact'))
             ->setFrom($email)
