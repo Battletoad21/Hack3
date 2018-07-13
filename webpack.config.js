@@ -9,6 +9,7 @@ Encore
     // will output as web/build/index.css
     .addEntry('index', './assets/scss/index.scss')
     .addEntry('style', './assets/scss/style.scss')
+    .addEntry('info', './assets/scss/info.scss')
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSassLoader();
