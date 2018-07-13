@@ -105,6 +105,24 @@ function showCommuneNew() {
         });
     }
 }
+//------------------horloge--------------------
+window.onload = function () {
+    horloge('horloge');
+};
+
+function horloge(el) {
+    if (typeof el == "string") {
+        el = document.getElementById(el);
+    }
+    function actualiser() {
+        var date = new Date();
+        var str = "";
+        str += "<div class='hoursandmin'><span class='hours'>" + date.getHours() + "</span>" + ":<span class='min'>" + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() + "</span>" + ":<span class='sec'>" + date.getSeconds() + "</span></div>";
+        el.innerHTML = str;
+    }
+    actualiser();
+    setInterval(actualiser, 1000);
+}
 
 /***/ })
 

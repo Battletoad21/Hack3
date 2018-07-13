@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-6">
                                 <div class="row">
-                                    <div class="col-4">
+                                  <div class="col-4">
                                         <h1 style="font-size: 50px; font-weight: bold; margin-top: 40px">{{ data.main.temp }}°C</h1>
                                     </div>
                                     <div style="font-size: 15px" class="col-4">
@@ -76,28 +76,27 @@
             </div>
         </div>
     </div>
+    <input type="hidden" id="lon" value="{{ lon }} ">
+    <input type="hidden" id="lat" value="{{lat }} ">
+    <br>
+    <h1 class="text-center">CarteQualité de l'Air</h1>
+    <div  id='map'  style='height:380px;'  />
 
-    <input id="lat" value="{{ lat }}" type="hidden">
-    <input id="lon" value="{{ lon }}" type="hidden">
-    <div  id='map'  style='height:380px;'></div>
-    <script  src="https://maps.googleapis.com/maps/api/js"></script>
+    <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 
     <script>
-        var  map  =  new  google.maps.Map(document.getElementById('map'),  {
+        var  OSM_URL  =  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var  OSM_ATTRIB  =  '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
+        var  osmLayer  =  L.tileLayer(OSM_URL,  {attribution:  OSM_ATTRIB});
 
-            center:  new  google.maps.LatLng(51.505,  -0.09),
-            mapTypeId:  google.maps.MapTypeId.ROADMAP,
-            zoom:  11
-        });
-
-        var  t  =  new  Date().getTime();
-        var  waqiMapOverlay  =  new  google.maps.ImageMapType({
-            getTileUrl:  function(coord,  zoom)  {
-                return  'https://tiles.waqi.info/tiles/usepa-aqi/'  +  zoom  +  "/"  +  coord.x  +  "/"  +  coord.y  +  ".png?token=_TOKEN_ID_";
-            },
-            name:  "Air  Quality",
-        });
-
-        map.overlayMapTypes.insertAt(0,waqiMapOverlay);
+        var  WAQI_URL    =  "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=_TOKEN_ID_";
+        var  WAQI_ATTR  =  'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
+        var  waqiLayer  =  L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});
+        console.log();
+        var  map  =  L.map('map').setView([$('#lat').val(),$('#lon').val()],  9);
+        map.addLayer(osmLayer).addLayer(waqiLayer);
     </script>
+
 {% endblock %}
