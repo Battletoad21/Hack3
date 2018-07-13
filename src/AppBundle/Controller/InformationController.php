@@ -75,9 +75,6 @@ class InformationController extends Controller
         $lat=$reponse_API['data']['coord']['lat'];
         $lon= $reponse_API['data']['coord']['lon'];
 
-      var_dump($lat);
-      var_dump($lon);
-
 
 
 
