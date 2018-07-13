@@ -3,44 +3,4 @@
 margin-left:7px ;
 }
 
-body{
-  background-color: yellow;
-}
-
-.modal-dialog.cascading-modal {
-
-
-}
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
-
-.blur{
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
-  position: absolute;
-  width: 400px;
-  height: 120px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  background-image: url('http://img2.themebin.com/hd-wallpapers/1920x1080/water_hd_1080p.jpg');
-}
-#horloge {
-  position: relative;
-  width: 400px;
-  height: 120px;
-  text-align: center;
-  line-height: 120px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  box-shadow: 0 0 15px #000;
-  font-size: 56px;
-  letter-spacing: 5px;
-  color: #fff;
-  margin-top: 1%;
-  background-color: #263238;
-}
