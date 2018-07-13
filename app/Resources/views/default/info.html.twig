@@ -38,7 +38,21 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-6">
-                            <h1 style="font-size: 65px; font-weight: 400; margin-top: 40px">{{ data.main.temp }}°C</h1>
+                                        <h1 style="font-size: 50px; font-weight: bold; margin-top: 40px">{{ data.main.temp }}°C</h1>
+                                    </div>
+                                    <div style="font-size: 15px" class="col-6">
+                                        <p class="text-right">Details</p>
+                                        <hr>
+                                        <p style="margin: 0;" class="text-right">T° min : {{ data.main.temp_min }} </p>
+                                        <p style="margin: 0;" class="text-right">T° max : {{ data.main.temp_max }} </p>
+                                        <p style="margin: 0;" class="text-right">Humidité : {{ data.main.humidity }}% </p>
+                                        <p style="margin: 0;" class="text-right">Vent : {{ data.wind.speed }} m/s </p>
+                                    </div>
+                                </div>
+                            <div class="col-8">
+                                <hr>
+                                <p class="text-right">{{ "now"|date("m/d/Y H:i:s") }}</p>
+                            </div>
                         </div>
                         <div style="font-size: 15px" class="col-6">
                             <p class="text-right">Details</p>
@@ -56,15 +70,8 @@
                 </div>
             {% endfor%}
             </div>
-        </div>
-    </div>
 
 
-
-
-
-
-                {#{{ dump(data) }}#}
 
                 <h3 style="margin-top: -50px; margin-bottom: 50px" class="text-center">Prévision qualité de l'air :</h3>
 
@@ -104,7 +111,27 @@
                         {% endif %}
                     {% endfor %}
                 </table>
-            </div>
-        </div>
-    </div>
+    <input type="hidden" id="lon" value="{{ lon }} ">
+    <input type="hidden" id="lat" value="{{lat }} ">
+    <br>
+    <h1 class="text-center">CarteQualité de l'Air</h1>
+    <div  id='map'  style='height:380px;'  />
+
+    <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+
+    <script>
+        var  OSM_URL  =  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var  OSM_ATTRIB  =  '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
+        var  osmLayer  =  L.tileLayer(OSM_URL,  {attribution:  OSM_ATTRIB});
+
+        var  WAQI_URL    =  "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=_TOKEN_ID_";
+        var  WAQI_ATTR  =  'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
+        var  waqiLayer  =  L.tileLayer(WAQI_URL,  {attribution:  WAQI_ATTR});
+        console.log();
+        var  map  =  L.map('map').setView([$('#lat').val(),$('#lon').val()],  9);
+        map.addLayer(osmLayer).addLayer(waqiLayer);
+    </script>
+
 {% endblock %}
