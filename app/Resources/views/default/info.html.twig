@@ -20,11 +20,11 @@
             <div class="modal-header white-text">
                 {% for data in data %}
                 <div class="row">
-                    <div class="offset-7 col-12">
+                    <div class="offset-5 col-12">
                         <h2 class="right">{{ data.name }}</h2>
                         <h6>
                             {% if data.weather.0.description == "clear sky" %}
-                            Ciel dégagé
+                                Ciel dégagé
                             {% endif %}</h6>
                         <small>
                             Qualité de l'air : <span style="color:  {{ test.0.couleurCarteGe }}; font-size: 20px;">{{ test.0.libelleQualiteAir }}</span>
@@ -37,24 +37,10 @@
                 <!-- Material textarea message -->
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-6">
-                                        <h1 style="font-size: 50px; font-weight: bold; margin-top: 40px">{{ data.main.temp }}°C</h1>
-                                    </div>
-                                    <div style="font-size: 15px" class="col-6">
-                                        <p class="text-right">Details</p>
-                                        <hr>
-                                        <p style="margin: 0;" class="text-right">T° min : {{ data.main.temp_min }} </p>
-                                        <p style="margin: 0;" class="text-right">T° max : {{ data.main.temp_max }} </p>
-                                        <p style="margin: 0;" class="text-right">Humidité : {{ data.main.humidity }}% </p>
-                                        <p style="margin: 0;" class="text-right">Vent : {{ data.wind.speed }} m/s </p>
-                                    </div>
-                                </div>
-                            <div class="col-8">
-                                <hr>
-                                <p class="text-right">{{ "now"|date("m/d/Y H:i:s") }}</p>
-                            </div>
+                        <div class="col-2">
+                            <h1 style="font-size: 45px; font-weight: 400; margin-top: 40px">{{ data.main.temp }}°C</h1>
                         </div>
-                        <div style="font-size: 15px" class="col-6">
+                        <div style="font-size: 15px" class="col-8">
                             <p class="text-right">Details</p>
                             <hr>
                             <p style="margin: 0;" class="text-right">T° min : {{ data.main.temp_min }} </p>
@@ -63,54 +49,56 @@
                             <p style="margin: 0;" class="text-right">Vent : {{ data.wind.speed }} m/s </p>
                         </div>
                     </div>
-                    <div class="col-8">
-                        <hr>
-                        <p class="text-right">{{ "now"|date("m/d/Y H:i:s") }}</p>
-                    </div>
                 </div>
-            {% endfor%}
+                    <div class="col-12">
+                        <hr>
+                        <p class="text-center">{{ "now"|date("m/d/Y H:i:s") }}</p>
+                    </div>
+
+                {% endfor%}
             </div>
+        </div>
+    </div>
 
 
+    <h3 style="margin-top: -50px; margin-bottom: 50px" class="text-center">Prévision qualité de l'air :</h3>
 
-                <h3 style="margin-top: -50px; margin-bottom: 50px" class="text-center">Prévision qualité de l'air :</h3>
+    <table class="table table-stripped">
+        <tr>
+            <th>Code Insee</th>
+            <th>Commune</th>
+            <th>Prvision pour :</th>
+            <th>Qualité de l'air</th>
+            <th>Polluant responsable</th>
+        </tr>
+        {% for test in test %}
+            {% if test.dateIndiceSupervise|date('Y-m-d H:i:s') == "2018-07-14 00:00:00"
+                and test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-14 00:00:00"
+            %}
+            {% else %}
+                <tr style="background-color: {{ test.couleurCarteGe }}">
+                    <td>{{ test.codeInsee }}</td>
+                    <td>{{ test.commune }}</td>
+                    <td>
 
-                <table class="table table-stripped">
-                    <tr>
-                        <th>Code Insee</th>
-                        <th>Commune</th>
-                        <th>Prvision pour :</th>
-                        <th>Qualité de l'air</th>
-                        <th>Polluant responsable</th>
-                    </tr>
-                    {% for test in test %}
-                        {% if test.dateIndiceSupervise|date('Y-m-d H:i:s') == "2018-07-14 00:00:00"
-                            and test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-14 00:00:00"
-                        %}
-                        {% else %}
-                    <tr style="background-color: {{ test.couleurCarteGe }}">
-                        <td>{{ test.codeInsee }}</td>
-                        <td>{{ test.commune }}</td>
-                        <td>
-
-                            {% if test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-13 00:00:00" %}
-                                Aujourd'hui
-                            {% endif %}
-                            {% if test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-14 00:00:00" %}
-                                Demain
-                            {% endif %}
-                            {% if test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-15 00:00:00" %}
-                                Après demain
-                            {% endif %}
-
-
-                        </td>
-                        <td>{{ test.libelleQualiteAir }}</td>
-                        <td>{{ test.libellePolluantResponsable }}</td>
-                    </tr>
+                        {% if test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-13 00:00:00" %}
+                            Aujourd'hui
                         {% endif %}
-                    {% endfor %}
-                </table>
+                        {% if test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-14 00:00:00" %}
+                            Demain
+                        {% endif %}
+                        {% if test.dateEcheance|date('Y-m-d H:i:s') == "2018-07-15 00:00:00" %}
+                            Après demain
+                        {% endif %}
+
+
+                    </td>
+                    <td>{{ test.libelleQualiteAir }}</td>
+                    <td>{{ test.libellePolluantResponsable }}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
     <input type="hidden" id="lon" value="{{ lon }} ">
     <input type="hidden" id="lat" value="{{lat }} ">
     <br>
