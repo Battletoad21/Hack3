@@ -8,6 +8,8 @@ Encore
     .addEntry('header', './assets/scss/header.scss')
     // will output as web/build/index.css
     .addEntry('index', './assets/scss/index.scss')
+    // will output as web/build/accueil.css
+    .addEntry('accueil', './assets/scss/accueil.scss')
     .addEntry('style', './assets/scss/style.scss')
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()

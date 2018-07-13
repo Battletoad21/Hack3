@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/accueil.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <section id="slider" class="section">
+        <a class="slider">
+            <div class="slider__container">
+                <div class="slider__item slide-burger">
+                    <div class="slider__content grid">
+                        <div class="column">
+                            <h1 class="title">ATMO</h1>
+                            <h1 class="title">Grand Est</h1>
+                        </div>
+                        <div class="column"><img src="http://www.atmo-grandest.eu/themes/atmo/logo.png" class="image burger"></div>
+                    </div>
+                </div>
+                <div class="slider__item slide-astronaut">
+                    <div class="slider__content grid">
+                        <div class="column">
+                            <h1 class="title">De</h1>
+                            <h1 class="title">l'air pur</h1>
+                            <h1 class="title">peut etre?</h1>
+                        </div>
+                        <div class="columna"><img src="https://mverissimo.github.io/tweenslideshow/dist/assets/images/astronaut.png" class="image astronaut"></div>
+                    </div>
+                </div>
+                <div class="slider__item slide-coffee">
+                    <a class="slider__content grid">
+                        <div class="column">
+                            <h1 class="title">Visitez</h1>
+                            <h1 class="title">nous!</h1>
+                        </div>
+                        <div class="column">
+                            <form method="post" action="/hello">
+                            <p class="text-center"><button class="pulse-button" type="submit">Entrer</button></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
